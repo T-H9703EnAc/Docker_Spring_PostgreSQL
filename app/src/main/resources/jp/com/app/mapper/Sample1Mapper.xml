@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jp.com.app.mapper.Sample1Mapper">
+  <select id="selectSql" resultType="jp.com.app.entity.SampleEntity1Response">
+    SELECT
+       id,
+       name
+    FROM
+       users_infomaion
+  </select>
+  <insert id="insertSql" parameterType="jp.com.app.entity.SampleEntity1Request">
+    INSERT INTO users_infomaion
+        (
+            id, 
+            name
+        )
+    VALUES 
+        (
+            #{id}, 
+            #{name}
+        )
+  </insert>
+  <update id="updateSql" parameterType="jp.com.app.entity.SampleEntity1Request">
+        UPDATE
+            users_infomaion
+        SET
+            id = #{id},
+            name = #{name}
+        WHERE
+            id = #{id}
+  </update>
+    <delete id="deleteSql" parameterType="jp.com.app.entity.SampleEntity1Request">
+        DELETE
+        FROM
+           users_infomaion
+        WHERE
+            id = #{id}
+  </delete>
+</mapper>
