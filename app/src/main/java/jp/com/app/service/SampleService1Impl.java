@@ -68,7 +68,7 @@ public class SampleService1Impl implements SampleService1 {
         );
 
         /** テーブルにデータを更新(Update文を発行) */
-        mapper.insertSql(entityRequest);    
+        mapper.updateSql(entityRequest);    
     }
 
     /**
@@ -82,6 +82,6 @@ public class SampleService1Impl implements SampleService1 {
         entityRequest.setId(Integer.parseInt(request.getId()));
 
         /** テーブルにデータを削除(DELETE文を発行) */
-        mapper.insertSql(entityRequest);       
+        mapper.deleteSql(entityRequest);       
     }
 }

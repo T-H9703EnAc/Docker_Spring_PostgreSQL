@@ -26,7 +26,6 @@
         UPDATE
             users_infomaion
         SET
-            id = #{id},
             name = #{name}
         WHERE
             id = #{id}
