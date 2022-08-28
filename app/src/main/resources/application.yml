@@ -5,3 +5,6 @@ spring:
     url: jdbc:postgresql://db:5432/sample
     username: user
     password: password
+
+test:
+  data: Hello

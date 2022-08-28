@@ -32,7 +32,7 @@ public class SampleController1Test {
                 .andExpect(status().isOk()) // レスポンスのステータスコードが200であることを確認
                 .andReturn(); 
                 MockHttpServletResponse res = result.getResponse();
-                System.out.println(res.getContentAsString()); // 戻乳のjsonを表示
+                System.out.println(res.getContentAsString()); // 戻り値のjsonを表示
     }
 
     @Test
